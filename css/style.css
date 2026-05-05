@@ -429,12 +429,16 @@
     }
     .proj-panel:hover .proj-panel-bg { transform: scale(1.04); }
 
-    /* Panel 1 – dark blue */
+    /* Panel 1 – deep purple/crypto */
     .p1 .proj-panel-bg {
+      background: linear-gradient(135deg, #0d0d1f 0%, #1a1040 40%, #0a0a28 100%);
+    }
+    /* Panel 2 – dark blue */
+    .p2 .proj-panel-bg {
       background: linear-gradient(135deg, #0f1628 0%, #1a2a4a 40%, #0d1f3c 100%);
     }
-    /* Panel 2 – warm dark */
-    .p2 .proj-panel-bg {
+    /* Panel 3 – warm dark */
+    .p3 .proj-panel-bg {
       background: linear-gradient(135deg, #1a1008 0%, #2d1f0a 50%, #1a1008 100%);
     }
 
@@ -803,7 +807,3 @@
       .projects-header { padding: 80px 24px 40px; }
       .proj-detail-inner { padding: 40px 24px; }
       .skills-grid { grid-template-columns: 1fr; }
-      footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
-      body { cursor: auto; }
-      #cursor { display: none; }
-    }
