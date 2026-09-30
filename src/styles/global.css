@@ -324,9 +324,13 @@ section {
   -webkit-background-clip: text;
   background-clip: text;
   transform: translateY(105%);
-  transition: transform 0.7s cubic-bezier(0.7, 0, 0.2, 1);
   white-space: nowrap;
   text-align: inherit;
+}
+/* only the entering/leaving words animate; the reset back to the bottom is instant */
+.hero-words span.is-on,
+.hero-words span.is-off {
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.2, 1);
 }
 .hero-words span.is-on {
   transform: translateY(0);
