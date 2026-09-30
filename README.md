@@ -1,41 +1,37 @@
 # Trần Ngọc Huy — Portfolio
 
-Personal portfolio website for **Trần Ngọc Huy**, Java Backend Developer Intern.
+Personal portfolio of **Trần Ngọc Huy**, Java Backend Developer.
 
 ## Tech
-- Vanilla HTML / CSS / JS — zero dependencies
-- Formspree for contact form submissions
-- Google Fonts (Outfit + Inter)
-- Hosted on GitHub Pages
+- Vite + React 19
+- React Three Fiber / drei / three.js: the 3D workstation scene is built entirely in code (no model files)
+- GSAP + ScrollTrigger: scroll-driven camera poses, pinned horizontal "Work" section, reveals
+- Formspree for the contact form
 
 ## Structure
 ```
-portfolio/
-├── index.html          ← Main entry point
-├── css/
-│   └── style.css       ← All styles (variables, layout, animations)
-├── js/
-│   └── main.js         ← Cursor, scroll reveal, ticker, contact form
-├── assets/
-│   └── photo.jpg       ← Profile photo
-└── README.md
+├── index.html
+├── public/              ← photo, client project screenshot & preview video
+├── src/
+│   ├── data.js          ← ALL content (profile, career, projects, stack) — edit here
+│   ├── App.jsx          ← layout, loader, scroll → scene wiring
+│   ├── components/      ← Hero/About/WhatIDo, Career, Work, Stack/Contact, nav
+│   ├── three/           ← Scene (lights, keycaps, rig), Workstation (desk, monitor, server), code texture
+│   └── styles/global.css
+└── .github/workflows/   ← build + deploy to GitHub Pages
 ```
 
-## Features
-- Editorial B&W design with grain texture overlay
-- Character-by-character hero name animation
-- Scrolling skills ticker marquee
-- Full-width project panels with expandable case studies
-- IntersectionObserver scroll-triggered reveals
-- Custom `mix-blend-mode: difference` cursor
-- Formspree contact form integration
-- Fully responsive
+## Develop
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # outputs dist/
+npm run preview
+```
 
-## Local Development
-Open `index.html` directly in a browser — no build step required.
-
-## Deploy (GitHub Pages)
-Push to the `main` branch. GitHub Pages serves `index.html` from the repo root automatically.
+## Deploy
+Push to `master` — GitHub Actions builds the site and publishes it to
+https://nghuyne.github.io/portfolio/ (Vite `base` is `/portfolio/`).
 
 ---
 © 2026 Trần Ngọc Huy · Ho Chi Minh City
